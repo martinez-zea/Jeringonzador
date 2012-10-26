@@ -4,16 +4,28 @@
     <title>Jeringonzador</title>
     <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
     <link rel="stylesheet" href="css/master.css">
+    <link href="css/transition.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="utf-8" src="lib/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.green_btn').click(function(event){
+        event.preventDefault();
+        $('.slide').fadeOut("slow", function(){
+          window.location = "index.html";
+        });
+      });
+    });
+    </script>
   </head>
 <body>
-    <div id="header" class="">
+    <div id="header" class="slide in">
       <h1 id="jeringonzador">jeringonzador</h1>
       <span>encripto / desencripto sus mensajes</span>
     </div>
-  <div id="encrypted_message">
+  <div id="encrypted_message" class="slide in">
       hola mundo 
   </div>
-  <div id="decrypt-actions" class="">
+  <div id="decrypt-actions" class="slide in">
     <div id="send" class="wrapper">
       <a href="#" class="red_btn">ESCUCHAR</a>  
     </div>
